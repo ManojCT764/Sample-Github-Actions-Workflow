@@ -1,0 +1,20 @@
+name: "Hello world workflow"
+
+#on key will help us to set up events
+# This will triger the workflow on push some to master or production branch
+
+on:
+  push:
+    branches:
+      - master
+      - production
+
+
+jobs:
+  # jobname
+  hellow_world:
+    # The type of environment this workflow will run
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Print hellow world"
+        run: echo "Hello World"
